@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheet.css" />
     <script src="main.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 </head>
 
 <body>
-    <header id="main-header">
+     <header id="main-header">
         <h1 class="logo">
             <img src="img/logo.png" alt="6BM logo">
         </h1>
@@ -106,43 +106,51 @@
                     <div class="concerts__photo, pink-border-bottom">
                         <img src="img/band02_WiechnikMarcin.jpg">
                     </div>
-                    <div class="concerts__details">
-                        <p class="concerts__date">20.12.2018</p>
-                        <p class="concerts__location">Lublin, klub XXX</p>
-                    </div>
+                    <div class = "concerts__tickets">
+                        <div class="concerts__details">
+                            <p class="concerts__date">20.12.2018</p>
+                            <p class="concerts__location">Lublin, klub XXX</p>
+                        </div>
                     <button type="button" class="btn-primary">BUY TICKET</button>
+                    </div>
                 </article>
                 <article class="concerts__item">
                     <div class="concerts__photo, pink-border-bottom">
                         <img src="img/band03_WiechnikMarcin.jpg">
                     </div>
-                    <div class="concerts__details">
-                        <p class="concerts__date">20.12.2018</p>
-                        <p class="concerts__location">Warszawa, klub YYY</p>
+                    <div class="concerts__tickets">
+                        <div class="concerts__details">
+                            <p class="concerts__date">20.12.2018</p>
+                            <p class="concerts__location">Warszawa, klub YYY</p>
+                        </div>
+                        <button type="button" class="btn-primary">BUY TICKET</button>
                     </div>
-                    <button type="button" class="btn-primary">BUY TICKET</button>
                 </article>
 
                 <article class="concerts__item">
                     <div class="concerts__photo, pink-border-bottom">
                         <img src="img/band04_JakubBodys.jpg">
                     </div>
-                    <div class="concerts__details">
-                        <p class="concerts__date">20.12.2018</p>
-                        <p class="concerts__location">Kraków, klub ZZZ</p>
+                    <div class="concerts__tickets">
+                        <div class="concerts__details">
+                            <p class="concerts__date">20.12.2018</p>
+                            <p class="concerts__location">Kraków, klub ZZZ</p>
+                        </div>
+                        <button type="button" class="btn-primary">BUY TICKET</button>
                     </div>
-                    <button type="button" class="btn-primary">BUY TICKET</button>
                 </article>
 
                 <article class="concerts__item">
                     <div class="concerts__photo, pink-border-bottom">
                         <img src="img/band05_JakubBodys.jpg">
                     </div>
-                    <div class="concerts__details">
-                        <p class="concerts__date">20.12.2018</p>
-                        <p class="concerts__location">Poznań, klub AAA</p>
+                    <div class="concerts__tickets">
+                        <div class="concerts__details">
+                            <p class="concerts__date">20.12.2018</p>
+                            <p class="concerts__location">Poznań, klub AAA</p>
+                        </div>
+                        <button type="button" class="btn-primary">BUY TICKET</button>
                     </div>
-                    <button type="button" class="btn-primary">BUY TICKET</button>
                 </article>
             </div>
         </section>
@@ -153,7 +161,7 @@
                 <h2>VIDEO</h2>
             </header>
             <article class="video-container pink-border-top">
-                <iframe width="830" height="418" src="https://www.youtube.com/embed/AstRXh-vKNI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="1080" height="540" src="https://www.youtube.com/embed/AstRXh-vKNI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </article>
         </section>
 
@@ -199,13 +207,13 @@
             <header class="section__header">
                 <h2>CONTACT</h2>
             </header>
-            <article>
-                <img class="contact-photo" src="img/band12.jpg">
-                <address class="contact-info">
+            <article class="contact">
+                <img class="contact__photo" src="img/band12.jpg">
+                <address class="contact__info">
                     Tel: 00 48 999 00 00<br>
                     e-mail: 6bmband@mail.mail
                 </address>
-                <form class="form">
+                <form class="contact__form">
                     <div class="form__field">
                         <label class="form__label" for="email">Email</label>
                         <input class="form__input" type="email" name="email" id="email" required>
@@ -221,8 +229,7 @@
             </article>
         </section>
     </main>
-    
-    <!-- footer, links -->
+                <!-- footer, links -->
 
     <footer>
         <h2 class="screen-reader-only">Social media links</h2>
@@ -241,6 +248,5 @@
             </li>
         </ul>
     </footer>
-
 </body>
 </html>
