@@ -6,48 +6,52 @@ html {
 }
 
 body {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 0px;
+    padding: 0px;
     background-color:  #25072e;
     background-image: url("img/background.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    font-family: "Open Sans";
-    color: #CCC8FF;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
     font-size: 13px;
+    color: #CCC8FF;
 }
 
 /*header*/
 
 #main-header {
-    display: inline-block;
-    width: 20%;
-    position: fixed;
-    margin-left: auto;
-    margin-right: auto;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    min-width: 180px;
+    height: 100vh;
 }
 
-.logo img {
-    display: block;
-    max-width: 80%;
-    margin: 10% auto 30px 10%;
+.logo {
+    position: fixed;
+    top: 40px;
 }
 
 .navbar {
-    display: block;
-    margin: 0px auto 0px 30px;
+    position: fixed;
+    top: 120px;
     padding: 0px;
-    list-style-type: none;
+    list-style: none;
     line-height: 30px;
 }
 
 .navbar__item a {
     margin-left: 1vw;
     font-size: 13px;
-    font-style: bold;
-    letter-spacing: 8px;
+    font-weight: bold;
+    letter-spacing: 6px;
     text-decoration: none;
     color: #EF008E;
-    opacity: 0.8
+    opacity: 0.8;
 }
 
 .navbar__item a:hover {
@@ -57,37 +61,42 @@ body {
 /*main*/
 
 .main-content  {
-    display: inline-block;
-    width: 80%;
-    float: right; 
+    display: flex;
+    flex-direction: column;  
+    flex-basis: 80%;
 }
 
 .content-section {
-    min-height: 100vh;
-    margin-right: 50px;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+   min-height: 100vh;
 }
 
 .section__header {
     display: block; 
-    margin-bottom: 50px;
+    margin: 60px 0px 30px 0px;
     padding-top: 20px;
     font-size: 18px;
-    font-style: bold;
+    font-weight: bold;
     letter-spacing: 6px;
-    text-align: right;
     color: #EF008E;
 }
 
 /*band members*/
 
 .band-members {
-    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
 }
 
-
 .band-members__item {
-    display: inline-block;
-    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
 }
 
 .band-members__photo {
@@ -119,34 +128,37 @@ body {
 /* Information about the band */
 
 .band {
-    display: block;
-    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
     position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+.band__photo {
+    flex-basis: 70%;
 }
 
 .band__photo img{
-    display: block;
-    max-width: 55vw;
-    float: right;
-    z-index: 0;
+    max-width: 100%;
 }
     
 .band__description {
-    display: block;
-    width: 30%;
-    height: auto;
-    float: left;
     position: absolute;
-    left: 5%;
-    bottom: 10%;
-    border-bottom: 3px solid #EF008E;
+    right: 60%;
+    top: 40%;
+    max-width: 320px;
+    height: auto;
     padding: 40px;
     background-color: #25072e;
+    border-bottom: 3px solid #EF008E;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .band__description h3{
     padding-bottom: 10px;
-    font-style: bold;
+    font-weight: bold;
     letter-spacing: 4px;
 }
 
@@ -168,55 +180,56 @@ body {
 /*concerts information*/
 
 .concerts {
-    display: block;
-    width: 90%;
-    margin-left: 10%;
-    margin-bottom: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 75%;
 }
 
 .concerts__item {
-    display: inline-block;
-    width: 40%;
-    float: right;
-    padding: 10px;
+    flex: 1 1 40%;
+    padding-left: 50px;
 }
 
 .concerts__item img{
-   display: block;
-   width: 100%;
+    max-width: 100%;
 }
 
+.concerts__tickets {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .concerts__details {
-    display: inline-block;
-    width: 40%;
+    line-height: 0px;
+    letter-spacing: 3px;
 }
 
 .concerts__date {
     font-size: 15px;
-    font-style: bold;
-    letter-spacing: 2px;
+    font-weight: bold;
 }
 
 .concerts__location {
-    display: block;
-    letter-spacing: 2px;
+    line-height: 15px;
+    opacity: 0.8;
 }
 
 .btn-primary {
-    float: right;
-    position: relative;
-    top: 20px;
+    padding: 8px;
+    background-color: rgba(204, 200, 255, 0.1);
     border-radius: 4px;
     border: none; 
-    padding: 10px;
-    background-color: rgba(204, 200, 255, 0.1);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
     letter-spacing: 2px;
-    font-size: 11px;
-    color: rgba(204, 200, 255, 0.6);
+    font-size: 13px;
+    color: rgba(204, 200, 255, 0.8);
 }
+
 .btn-primary:hover{
     background-color: rgba(204, 200, 255, 0.4);
 }
+
 .btn-primary:focus {
     border: solid 1px rgba(204, 200, 255, 0.6);
 }
@@ -224,97 +237,112 @@ body {
 /* video */
 
 .video-container {
-    display: block;
-    width: 80%;
-    margin-left: 20%;
+    border-top: 3px solid #EF008E;
+    margin-bottom: 20vh;
+
 }
 
 .video-container iframe {
-    display: block;
-    width: 100%;
+    max-width: 100%;
 }
 
 /* photo gallery */
 
 .gallery {
-    display: block;
-    width: 90%;
-    margin-left: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: space-between;
+    width: 85%;
+    margin-bottom: 20vh;
 }
 
 .gallery__item{
-    display: inline-block;
-    list-style-type: none;
-    width: 30%;
-    padding: 10px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    padding-top: 2%;
+    flex-basis: 32%;
 }
 
 .gallery__item img{
-    display: inline-block;
-    width: 100%
+    max-width: 100%;
 }
-
 /* contact */
 
-.contact-photo {
-    display: inline-block;
-    width: 45%;
-    margin-left: 15%;
+.contact {
+    display: flex; 
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 85%;
+    margin-bottom: 20vh;
 }
 
-.contact-info {
-    display: inline-block;
-    margin-left: 5%;
-    padding-top: 10%;
-    position: absolute;
+.contact__photo {
+    flex-basis: 50%;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.contact__photo img{
+    max-width: 100%;
+}
+
+.contact__info {
+    width: 40%;
+    align-self: center;
+    margin-left: 10%;
     font-style: normal;
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
     opacity: 0.8;
 }
 
-.form {
-    display: block;
-    height: 30%;
-    margin-top: 2%;
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    top: 20px;
+    flex-basis: 32%;
+    min-height: 200px;
 }
 
-.form__field {
-    margin: 1% 15% 0 15%;
-}
 
 .form__label {
     display: block;
-    margin-bottom: 10px;
+    padding: 10px;
     letter-spacing: 1.5px;
     opacity: 0.8;
 }
 
 .form__input {
-    width: 40%;
-    border-radius: 5px;
+    width: 100%;
     background-color: #CCC8FF;
+    border-radius: 5px;
     line-height: 30px;
     opacity: 0.1;
     
 }
 .form__button {
-    float: left;
-    margin: 1% 0 0 15%;
+    position: relative;
+    top: 20px;
+    opacity: 0.8;
 }
+
 
 /* footer */
 
 .social-media {
-    position: fixed;
-    bottom: 40px;
     list-style: none;
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+    padding: 0px;
     line-height: 30px;
 }
 
 .social-media__item img {
     width: 20px;
     height: auto;
-    opacity: 0.8;
 }
 
 .social-media__item img:hover{
