@@ -143,6 +143,10 @@ h1, h2, h3 {
     letter-spacing: 4px;
 }
 
+.band-members__photo {
+    opacity: 0.8;
+}
+
 .band-members__item:hover > .band-members__photo {
     opacity: 1;
 }
