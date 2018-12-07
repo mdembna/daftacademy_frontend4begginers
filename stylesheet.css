@@ -3,6 +3,10 @@
     box-sizing: border-box;
 }
 
+::selection {
+    background-color: rgba(236, 0, 140, 0.2)
+}
+
 /* STYLING FOR ALL DEVICES AND LAYOUT FOR SMALL SCREENS */
 
 body {
@@ -25,11 +29,6 @@ ul {
     margin: 0;
     padding: 0;
 }
-/* links */
-
-a {
-    text-decoration: none;
-}
 
 /* headers */
 
@@ -38,13 +37,19 @@ h1, h2, h3 {
     margin: 0;
 }
 
+/* links */
+
+a {
+    text-decoration: none;
+}
+
 /* buttons */
 
 .btn-primary {
     padding: 7px 15px;
     background-color: rgba(204, 200, 255, 0.1);
     border-radius: 3px;
-    border-color: rgba(204, 200, 255, 0.1); 
+    border: none;
     letter-spacing: 1.6px;
     font-size: 12px;
     font-weight: 600;
@@ -52,12 +57,27 @@ h1, h2, h3 {
     color: rgba(204, 200, 255, 0.8);
 }
 
-.btn-primary:hover{
-    background-color: rgba(204, 200, 255, 0.4);
+/*################################### BUTTONS - HOVER ACTIVE FOCUS #####################################################*/
+
+.btn-primary:hover {
+    background-color: rgba(204, 200, 255, 0.2);
 }
 
 .btn-primary:focus {
     border: solid 1px rgba(204, 200, 255, 0.6);
+    background-color: rgba(204, 200, 255, 0.2);
+    outline: none;
+}
+
+.btn-primary:active {
+    border: solid 1px rgba(204, 200, 255, 0.2);
+    background-color: rgba(204, 200, 255, 0.1);
+    color: rgba(204, 200, 255, 0.6);
+}
+
+
+.btn-primary:active {
+
 }
 
 /* pink borders */
@@ -68,7 +88,7 @@ h1, h2, h3 {
 .pink-border-bottom {
     border-bottom: 3px solid #EF008E;
 }
-
+  
 /*main header, navigation*/
 
 .main-header {
@@ -96,11 +116,22 @@ h1, h2, h3 {
     font-size: 13px;
     font-weight: bold;
     letter-spacing: 6.7px;
-    color: rgba(239, 0, 142, 0.6);
+    color: #EF008E;
+    opacity: 0.6;
 }
+/*################################### NAVBAR ITEMS - HOVER, FOCUS #####################################################*/
 
 .navbar__item a:hover {
-    color: rgba(239, 0, 142, 1)
+    opacity: 1;
+}
+
+.navbar__item a:focus {
+    opacity: 1;
+    outline: none;
+}
+
+.navbar__item a:active {
+    opacity: 0.4;
 }
 
 /*main*/
@@ -134,18 +165,21 @@ h1, h2, h3 {
 .band-members__name {
     font-size: 15px;
     font-style: bold;
-    letter-spacing: 7px;
+    letter-spacing: 6px;
     opacity: 0;
 }
 
 .band-members__caption {
+    line-height: 0px;
     opacity: 0;
     letter-spacing: 4px;
 }
 
 .band-members__photo {
-    opacity: 0.8;
+    opacity: 0.6;
 }
+
+/*################################### BAND MEMBERS #####################################################*/
 
 .band-members__item:hover > .band-members__photo {
     opacity: 1;
@@ -232,7 +266,7 @@ margin-bottom: 40px;
     margin-bottom: 20px;
 }
 
-.gallery__image{
+.gallery__image {
     max-width: 100%;
 }
 /* contact */
@@ -257,7 +291,6 @@ margin-bottom: 40px;
 }
 
 .contact__form {
-
     padding-top: 40px;
  
 }
@@ -277,8 +310,15 @@ margin-bottom: 40px;
     padding: 10px 15px;
     border: none;
     border-radius: 4px;
-    background-color: rgba(219, 216, 251, 0.1);  
+    background-color: rgba(219, 216, 251, 0.1); 
+    color: rgb(204, 200, 255); 
+    font-size: 13px;
 }
+
+.form__input:focus {
+    outline: 2px solid rgba(204, 200, 255, 0.6);
+}
+
 
 .form__button {
     margin-top: 20px;
@@ -300,14 +340,26 @@ margin-bottom: 40px;
     margin: 10px;
 }
 
-.social-media__image {
-    width: 20px;
-    opacity: 0.8;
+.social-media__item a{
+    opacity: 0.6;
 }
 
-.social-media__image:hover{
+/*################################### FOOTER #####################################################*/
+
+.social-media__item a:hover {
     opacity: 1;
 }
+
+.social-media__item a:focus {
+    opacity: 1;
+    outline: none;
+}
+
+.social-media__image {
+    width: 20px;
+}
+
+/* Screen readers */
 
 .screen-reader-only {
     position: absolute;
@@ -365,8 +417,6 @@ margin-bottom: 40px;
         flex-basis: 50%;
         padding: 0 0 45px 55px;
     }
-
-    
      
 }
 
@@ -402,6 +452,7 @@ margin-bottom: 40px;
     }
 
     .section__header {
+        font-size: 28px;
         margin: 40px 0;
     }
 
@@ -448,9 +499,16 @@ margin-bottom: 40px;
         width: 80%;
     }
 
-    .gallery__item{
+    /*################################### GALLERY ANIMATION #####################################################*/
+
+    .gallery__item {
         flex-basis: 30%;
         padding: 0 0 20px 20px;
+        transition: transform 0.5s;
+    }
+
+    .gallery__item:hover {
+        transform: scale(1.1);
     }
 
 
@@ -497,4 +555,5 @@ margin-bottom: 40px;
         max-height: 220px;
     }
 }
+
 
