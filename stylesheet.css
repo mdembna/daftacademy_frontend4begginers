@@ -72,7 +72,7 @@ a {
 
 .btn-primary:active {
     background-color: rgba(204, 200, 255, 0.1);
-    border: solid 1px rgba(204, 200, 255, 0.2);
+    border: solid 1px rgba(204, 200, 255, 0.1);
     color: rgba(204, 200, 255, 0.6);
 }
 
@@ -114,13 +114,13 @@ a {
     letter-spacing: 6.7px;
     color: #EF008E;
     opacity: 0.6;
-    transition: opacity 0.2s linear;
+    transition: all 0.2s linear;
 }
 /*################################### NAVBAR ITEMS - HOVER, FOCUS #####################################################*/
 
 .navbar__item a:hover {
     opacity: 1;
-}
+} 
 
 .navbar__item a:focus {
     opacity: 1;
@@ -129,8 +129,7 @@ a {
 
 .navbar__item a:active {
     opacity: 0.4;
-}
-
+} 
 
 /*main*/
 
@@ -190,7 +189,7 @@ a {
 
 /*################################### BAND MEMBERS #####################################################*/
 
-.band-members__item:hover  .band-members__photo  {
+.band-members__item:hover  .band-members__photo {
     opacity: 1;
 }
 .band-members__item:hover  .band-members__name {
